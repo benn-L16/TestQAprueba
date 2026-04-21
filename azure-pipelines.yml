@@ -15,8 +15,9 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    jdkVersionOption: '17'                    # ← más moderno y estable
     jdkArchitectureOption: 'x64'
+    goals: 'clean test'                       # limpia + ejecuta tests
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'test'
+    testRunTitle: 'Pruebas Unitarias Calculadora'
